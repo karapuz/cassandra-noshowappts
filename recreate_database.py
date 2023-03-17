@@ -9,7 +9,7 @@ def main():
     """
     Main script that tears down and rebuilds the tables within Cassandra
     """
-    cluster, session = etl.cassandra_connection()
+    session, cluster = etl.cassandra_connection()
 
     try:
         table_list = ['appointments', 'patients']
